@@ -3,33 +3,36 @@ import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
 
-function App() {
-  const [count, setCount] = useState(0)
+const todoList = []; //creating an empty array and srore it in the variable
 
+todoList.push( //inside the array creating 3 objects with properties id and title
+  {id: 1, title: "Review assignment"},
+  {id: 2, title: "Complete assignment"},
+  {id: 3, title: "Create mindset resposes"},
+  {id:4, title: "Submit assignment"}
+);
+
+function App() {
+  
   return (
-    <>
       <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+        <h1>Todo List</h1>
+
+        {/* adding style to the ul elements to allign list left*/}
+        
+        <ul style={{ textAlign: 'left'}}> 
+
+        {/*inserting a js expression and map over todoList array to return a list item 
+        with key attribute with value of id property and inner text content with value 
+        of title property*/}
+            
+          {todoList.map((item) => ( 
+            <li key={item.id}>{item.title}</li>
+          ))
+          }
+        </ul>
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+  );
 }
 
-export default App
+export default App;
