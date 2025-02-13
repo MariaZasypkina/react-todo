@@ -1,4 +1,15 @@
 import TodoListItem from "./TodoListItem";
+import PropTypes from "prop-types";
+
+TodoList.propTypes = {
+    todoList: PropTypes.arrayOf(
+      PropTypes.shape({
+        id: PropTypes.string.isRequired,
+        title: PropTypes.string.isRequired,
+      })
+    ).isRequired,
+    onRemoveTodo: PropTypes.func.isRequired,
+  };
 
 function TodoList({ todoList, onRemoveTodo }){
 
@@ -7,7 +18,7 @@ function TodoList({ todoList, onRemoveTodo }){
         {todoList.map(todo => ( 
             <TodoListItem 
             key={todo.id} 
-            item={todo} 
+            todo={todo} 
             onRemoveTodo={onRemoveTodo}
             />
           ))}
