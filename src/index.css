@@ -171,3 +171,14 @@ section {
     font-size: 1.1rem;
   }
 }
+@media (max-width: 768px) {
+  .sort-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .sort-buttons button {
+    width: 100%;
+  }
+}
