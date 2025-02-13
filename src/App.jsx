@@ -108,8 +108,8 @@ function App() {
     }
   };
 
-  const addTodo = (newTodoTitle) => {
-    addTodoToAirtable(newTodoTitle);
+  const addTodo = (newTodo) => {
+    addTodoToAirtable(newTodo.title);
   };
 
   useEffect(() => {
@@ -118,6 +118,15 @@ function App() {
 
   return (
     <BrowserRouter>
+
+<nav>
+  <ul>
+    <li><a href="/">Home</a></li>
+    <li><a href="/about">About</a></li>
+    <li><a href="/contact">Contact</a></li>
+  </ul>
+</nav>
+
       <Routes>
         <Route
           path="/"

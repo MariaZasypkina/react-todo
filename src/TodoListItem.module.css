@@ -1,0 +1,28 @@
+.ListItem {
+    /*all: unset;*/
+    color: #034774; /* blue color */
+    font-size: 22px; /* enlarged font */
+    padding: 5px; /* Inner paddings */
+    border-bottom: 1px solid #ddd;
+}
+
+.ChecklistIcon {
+    color: #3498db; 
+    font-size: 2.2rem; 
+    margin-right: 8px; 
+  }
+
+  .RemoveButton {
+    background-color: transparent;
+    transition: transform 1.2s ease;
+  }
+
+  .RemoveButton:hover {
+    transform: scale(1.1);
+  }
+
+  .TrashIcon {
+    font-size: 1.2rem; /* Размер иконки */
+  }
+
+  
